@@ -186,7 +186,7 @@ on init
     chown root radio /sys/devices/platform/Accdet_Driver/driver/accdet_call_state
 
     # VideoCodec
-    mknod /dev/Vcodec c 160 0
+    exec /system/xbin/mknod /dev/Vcodec c 160 0
     chmod 0660 /dev/Vcodec
     chown system media /dev/Vcodec
 
@@ -253,7 +253,7 @@ on init
     chmod 0220 /sys/power/tuxonice/do_hibernate
 
     # FM Radio device node
-    mknod /dev/fm     c 193 0;
+    exec /system/xbin/mknod /dev/fm     c 193 0;
     chmod 0660 /dev/fm
     chown system media /dev/fm
 
