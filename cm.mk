@@ -16,10 +16,6 @@
 $(call inherit-product, device/fly/iq446/full_iq446.mk)
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 960
-TARGET_SCREEN_WIDTH := 540
-
 PRODUCT_NAME := cm_iq446
 PRODUCT_DEVICE := iq446
 PRODUCT_MODEL := Magic

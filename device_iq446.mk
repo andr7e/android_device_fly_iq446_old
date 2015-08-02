@@ -14,11 +14,12 @@
 
 $(call inherit-product-if-exists, vendor/fly/iq446/iq446-vendor.mk)
 
+# overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay/
 
-# prebuilt kernel modules
-MOD_TGT := /system/lib/modules
-MOD_SRC := $(LOCAL_PATH)/prebuilt/modules
+# Boot animation
+TARGET_SCREEN_HEIGHT := 960
+TARGET_SCREEN_WIDTH := 540
 
 # frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml
 
@@ -71,13 +72,13 @@ PRODUCT_PROPERTY_OVERRIDES := \
 	ro.mediatek.wlan.p2p=1 \
 	ro.mediatek.wlan.wsc=1 \
 	ro.opengles.version=131072 \
-	ro.sf.lcd_density=320 \
+	ro.sf.lcd_density=240 \
 	ro.telephony.ril_class=MediaTekRIL \
 	wifi.direct.interface=p2p0 \
 	wifi.interface=wlan0 \
 	wifi.tethering.interface=ap0
 
-PRODUCT_TAGS += dalvik.gc.type-precise
+#PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_PACKAGES += \
 	gsm0710muxd
@@ -91,7 +92,7 @@ PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
         $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
-# audio
+# Audio
 PRODUCT_PACKAGES += \
 	audio.r_submix.default \
 	audio.a2dp.default \
