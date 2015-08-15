@@ -3,5 +3,5 @@ rild.libargs=-d /dev/ttyC0
 
 # Graphics
 ro.opengles.version=131072 \
-ro.zygote.disable_gl_preload=1
+debug.sf.nobootanimation=1
 
