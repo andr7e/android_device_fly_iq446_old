@@ -63,6 +63,7 @@ TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 # make boot
 MTK_TOOLS_DIR := $(LOCAL_PATH)/mtk_tools
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/bootimg.mk
+BOARD_CUSTOM_BOOTIMG := true
 
 # partition info
 BOARD_BOOTIMAGE_PARTITION_SIZE := 6291456
